@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+<header>
+    <h1><%= title %></h1>
+</header>
+
+<nav>
+    <span><a title="主页" href="/">主页</a></span>
+    <% if(user){%>
+    <span><a title="登出" href="/logout">登出</a></span>
+    <% } else { %>
+    <span><a title="登录" href="/login">登录</a></span>
+    <span><a title="注册" href="/reg">注册</a></span>
+    <span><a title="修改邮箱" href="/change_email">修改</a>
+    <span><a title="删除用户" href="/delete">删除</a></span>
+    <span><a title="查看已注册用户" href="/users">所有用户信息</a></span>
+    <% } %>
+</nav>
+<article>
+
+    <% if (success) { %>
+    <div><%= success %></div>
+    <% } %>
+    <% if (error) { %>
+    <div><%= error %> </div>
+<% } %>

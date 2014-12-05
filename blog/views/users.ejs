@@ -1,0 +1,9 @@
+<%- include header %>
+<% users.forEach(function (user, s) { %>
+<p class="info">
+    用户名：<%= user.name %>
+    邮箱：<%= user.email %>
+    测试数据：<%=user.num%>
+</p>
+<% }) %>
+<%- include footer %>
